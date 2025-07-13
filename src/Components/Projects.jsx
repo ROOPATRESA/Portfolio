@@ -1,15 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
-
 function Projects() {
-
   const projects = [
     {
       name: "Concert Booking App",
       desc: "Full‑stack MERN app with QR ticketing and email delivery.",
       img: "/concert.png",
-      github: "https://github.com/yourusername/concert-booking",
+      github: "https://https://github.com/ROOPATRESA/concert-frontend",
       live: "https://yourconcertapp.netlify.app",
     },
     {
@@ -30,7 +28,10 @@ function Projects() {
 
   return (
     <>
-      <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-[#0f1d3a] text-white px-6 py-24 scroll-mt-24 scroll-smooth">
+      <section
+        id="projects"
+        className="min-h-screen flex flex-col items-center justify-center bg-[#0f1d3a] text-white px-6 py-24 scroll-mt-24 scroll-smooth"
+      >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +41,7 @@ function Projects() {
         >
           <motion.h2
             className="text-4xl font-extrabold mb-10 text-purple-400 cursor-pointer"
-            whileHover={{ scale: 1.1, color: '#ffffff' }}
+            whileHover={{ scale: 1.1, color: "#ffffff" }}
             transition={{ duration: 0.3 }}
           >
             Projects
@@ -70,11 +71,13 @@ function Projects() {
                 <div className="p-5">
                   <motion.h3
                     className="text-xl font-semibold mb-2 text-purple-300"
-                    whileHover={{ scale: 1.05, color: '#fff' }}
+                    whileHover={{ scale: 1.05, color: "#fff" }}
                   >
                     {p.name}
                   </motion.h3>
-                  <p className="text-gray-300 text-sm mb-4 min-h-[60px]">{p.desc}</p>
+                  <p className="text-gray-300 text-sm mb-4 min-h-[60px]">
+                    {p.desc}
+                  </p>
                   <div className="flex justify-center gap-4">
                     <motion.a
                       href={p.github}
@@ -101,7 +104,6 @@ function Projects() {
           </div>
         </motion.div>
       </section>
-
     </>
   );
 }
